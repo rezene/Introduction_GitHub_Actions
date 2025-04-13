@@ -4,6 +4,7 @@ on:
   push:
     branches:     # This workflow will run on push and pull request to the main branch
       - main
+      
   pull_request: 
     branches:
       - main
