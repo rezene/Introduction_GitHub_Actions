@@ -5,4 +5,4 @@ runs:
   steps:
     - name: Say Hello from Bash
       shell: bash
-      run: bash scripts.sh
+      run: bash ${GITHUB_ACTION_PATH}/scripts.sh
