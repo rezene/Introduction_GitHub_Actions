@@ -1,0 +1,8 @@
+name: 'My Composite Action'
+description: 'Prints message from Bash'
+runs:
+  using: 'composite'
+  steps:
+    - name: Say Hello from Bash
+      shell: bash
+      run: bash ${GITHUB_ACTION_PATH}/scripts.sh

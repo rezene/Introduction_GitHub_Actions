@@ -1,0 +1,41 @@
+name: Medium Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to run the job in'
+        required: true
+        default: 'development'
+        type: choice
+        options:
+          - development
+          - staging
+          - production
+      debug:
+        description: 'Enable debug mode'
+        required: false
+        default: false
+        type: boolean
+
+  schedule:
+    - cron: '0 3 * * *'  # Runs daily at 03:00 UTC
+
+jobs:
+  run-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Show environment variables
+        run: |
+          echo "ENVIRONMENT=${{ github.event.inputs.environment || 'production' }}" 
+          echo "DEBUG_MODE=${{ github.event.inputs.debug || 'false' }}" 
+
+      - name: Show debug mode
+        run: |
+          echo "Running in $ENVIRONMENT environment"
+          if [ "$DEBUG_MODE" == "true" ]; then
+            echo "Debug mode is enabled"
+          fi

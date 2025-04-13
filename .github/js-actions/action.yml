@@ -1,0 +1,5 @@
+name: 'My JavaScript Action'
+description: 'Prints Hello from JavaScript'
+runs:
+  using: 'node16'
+  main: 'index.js'

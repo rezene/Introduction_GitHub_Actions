@@ -1,0 +1,22 @@
+name: Advance Workflow
+
+on:
+  push:
+    branches:     # This workflow will run on push and pull request to the main branch
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: node:18    # Use Node.js 18 as the container image for JavaScript actions
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run JavaScript Action
+        uses: ./js-actions
+
+      - name: Run Composite Action
+        uses: ./github/actions/composite
