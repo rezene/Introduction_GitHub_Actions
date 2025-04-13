@@ -17,7 +17,6 @@ This example demonstrates how to create a workflow with a **single job** trigger
 
 > Useful for: Simple CI tasks, like running tests or linting on code pushes or pull requests.
 
----
 
 ### 2. Medium – Workflow Dispatch and Scheduled Cron Job
 
@@ -29,7 +28,6 @@ This workflow uses:
 
 > Useful for: Running recurring tasks such as backups, cleanups, or report generation.
 
----
 
 ### 3. Advanced – Docker Container, JavaScript, and Composite Actions
 
@@ -45,7 +43,6 @@ Custom Actions:
 
 > Useful for: Building modular, maintainable, and portable CI/CD workflows.
 
----
 
 ## 🚀 How to Use
 
