@@ -38,8 +38,8 @@ A more sophisticated setup combining:
 
 📁 File: `.github/workflows/advanced.yml`  
 Custom Actions:
-- JavaScript Action: `js-action/`
-- Composite Action: `.github/actions/my-composite/`
+- JavaScript Action: `js-actions/`
+- Composite Action: `actions/composite/`
 
 > Useful for: Building modular, maintainable, and portable CI/CD workflows.
 
