@@ -2,7 +2,7 @@ name: Basic Workflow
 
 on:
   push:
-    branches:     # This workflow will run on push and pull request to the main branch
+    branches:  # This workflow will run on push and pull request to the main branch
       - main
 
   pull_request: 
@@ -15,3 +15,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+
+      - name: Show event name 
+        run: echo "event name is:" ${{ github.event_name }} # This will print the event name that triggered the workflow, refer to Github Context from slides
