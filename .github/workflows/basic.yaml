@@ -15,7 +15,3 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-
-      - name: Show event name 
-        shell: bash
-        run: ${{github.event_name }} # This will print the event name that triggered the workflow, refer to Github Context from slides
