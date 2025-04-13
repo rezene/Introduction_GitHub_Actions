@@ -32,11 +32,3 @@ jobs:
         run: |
           echo "ENVIRONMENT=${{ github.event.inputs.environment || 'production' }}" 
           echo "DEBUG_MODE=${{ github.event.inputs.debug || 'false' }}" 
-
-      - name: Show debug mode
-        shell: bash
-        run: |
-          echo "Running in $ENVIRONMENT environment"
-          if [ "$DEBUG_MODE" == "true" ]; then
-            echo "Debug mode is enabled"
-          fi
