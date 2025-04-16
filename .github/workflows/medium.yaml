@@ -18,9 +18,6 @@ on:
         default: false
         type: boolean
 
-  schedule:
-    - cron: '0 3 * * *'  # Runs daily at 03:00 UTC
-
 jobs:
   run-task:
     runs-on: ubuntu-latest

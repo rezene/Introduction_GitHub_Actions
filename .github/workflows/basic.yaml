@@ -2,11 +2,11 @@ name: Basic Workflow
 
 on:
   push:
-    branches:  # This workflow will run on push and pull request to the main branch
+    branches:
       - main
 
-  watch:
-    types: [started]
+  schedule:
+    - cron: '*/10 * * * *'  # Every 10 minutes
 
 jobs:
   build:
