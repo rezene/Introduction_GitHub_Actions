@@ -1,4 +1,4 @@
-name: "Label new pull requests"
+name: "Add PR Label"
 description: "Add a label when a new PR is opened."
 author: "Osama Tahir"
 
