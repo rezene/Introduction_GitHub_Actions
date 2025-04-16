@@ -34,4 +34,4 @@ jobs:
           echo "DEBUG_MODE=${{ github.event.inputs.debug || 'false' }}" 
       
       - name: Show secret (for testing only!)
-        run: echo "MY_SECRET=${{ secrets.MY_SECRET }}"
+        run: echo "${{ secrets.MY_SECRET }}" | cut -c1-4
